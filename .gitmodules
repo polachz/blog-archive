@@ -1,0 +1,6 @@
+[submodule "content"]
+	path = content
+	url = git@github.com:polachz/blog_content.git
+[submodule "static"]
+	path = static
+	url = git@github.com:polachz/blog_static_content.git
