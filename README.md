@@ -14,6 +14,8 @@ Have a peek »»» [https://www.attejuvonen.fi](https://www.attejuvonen.fi)
 - **Teasers** of posts are generated to front page with **infinite scroll** which gracefully degrades into **pagination**.
 - Allow readers to be notified of updates with **RSS feed** and email newsletter.
 - Contact Form.
+- **gatsby-remark-grid-tables** To allow more feature rich tables
+
 
 ## Feel free to fork
 

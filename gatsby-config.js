@@ -114,6 +114,7 @@ module.exports = {
             resolve: "gatsby-remark-component-parent2div",
             options: { components: ["re-icons", "re-img", "re-tracedsvg-gallery"] }
           },
+          `gatsby-remark-grid-tables`,
           `gatsby-plugin-sharp`,
           {
             resolve: `gatsby-remark-images`,

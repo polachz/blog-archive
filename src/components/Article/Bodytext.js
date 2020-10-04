@@ -93,6 +93,36 @@ const Bodytext = props => {
             padding: 0.1em 0.3em 0.2em;
             border-radius: 0.1em;
           }
+          :global(table) {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 1.5em;
+          }
+          :global(thead) {
+            background: ${theme.color.neutral.gray.d};
+          }
+          :global(td) {
+            border: 1px solid #AAA;
+            border-collapse: collapse;
+            padding: 3px 10px;
+            vertical-align: middle;
+            text-align: left;
+            :global(p){
+              margin: 0;
+              font-size: 16px;
+            }
+          }
+          :global(th) {
+            border: 1px solid #AAA;
+            border-collapse: collapse;
+            padding: 3px 10px;
+            vertical-align: middle;
+            text-align: left;
+            :global(p){
+              margin: 0;
+              font-size: 16px;
+            }
+          }
         }
       `}</style>
     </React.Fragment>
