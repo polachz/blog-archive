@@ -1,3 +1,0 @@
-# Redirect alternative domains to primary domain
-https://blog.polach.me/* https://polach.me/:splat 301!
-https://www.polach.me/* https://polach.me/:splat 301!
