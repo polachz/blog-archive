@@ -26,6 +26,7 @@ export default class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
         </head>
+        scroll-behavior: smooth;
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />

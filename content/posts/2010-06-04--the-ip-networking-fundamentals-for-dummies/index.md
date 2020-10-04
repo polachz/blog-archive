@@ -17,23 +17,20 @@ In this post you can find a brief description of the IP network topology termino
 If you read an article about networking or tried to use some hints from the Internet targeted on networking, maybe you will find that those articles operates with terms as IP address, Subnet mask, Network IP address range, Default gateway IP etc. If you are familiar with those terms, then you do not read this article.
 
 In next paragraphs I’ll try to explain those terms:
-* IP Address
-* Public/Private IP address
-* Subnet
-* Subnet Mask
-* Broadcast
-* Router
-* Default Gateway
-* NAT
-* [DHCP](#dhcp-link)
+* [IP Address](#iplink)
+* [Public/Private IP address](#publiclink)
+* [Subnet](#subnetlink)
+* [Subnet Mask](#masklink)
+* [Broadcast](#broadcastlink)
+* [Router](#gatewaylink)
+* [Default Gateway](#gatewaylink)
+* [NAT](#natlink)
+* [DHCP](#dhcplink)
 
 I’ll try to explain it very easily and by form understandable for normal computer user with no networking experience. Then I’ll use some simplification here. If you are networking geek, do not beat me ;)
-
-
-
+<a id='iplink'></a>
 
 ## IP Address
-
 
 So first question here can be here: What the IP address is?
 
@@ -46,9 +43,7 @@ Computers use same concept. Any computer connected to the Internet must have one
 To grant that two computers on the Internet will not have same IP address an administration authority for IP address space has to be founded. At practice here is one global authority called “Internet Assigned Numbers Authority“ (IANA), which assign blocks of public IPs to other organizations and ISPs and they assign IPs to their business partners or customers.
 
 Designers of the IPv4 address expected that this amount of unique addresses will be completely sufficient in the future. But in those days, due explosive growth of the Internet the past, we are near to state when last block of free IPv4 addresses will be assigned for use and the Internet address space will be saturated. To solve this problem, new IP address standard has been specified. It is IPv6 address format. IPv6 address is 128bit long thus it supports 2128 (about 3.4×1038) addresses. But IPv6 is still not supported by many ISPs, so for our purposes we will continue with IPv4 addresses only.
-
-
-
+<a id='publiclink'></a>
 
 ## Public/Private IP Address
 
@@ -64,6 +59,7 @@ Network designers discovered in the past that some computers do not need to be c
 | 16-bit block          | 192.168.0.0 – 192.168.255.255 |
 
 If you see a computer with IP address from those ranges then it is a part of private LAN network.
+<a id='subnetlink'></a>
 
 ## Subnet
 
@@ -72,6 +68,7 @@ In previous paragraphs I described the addressing principles of the IP networkin
 When I tried to describe addressing principles, I have used “snail mail” as well known example, because everybody has experience with classical letter delivery. And this can helps to us to understand subnet principles too. For example you do not send a letter to your wife sitting in same room to ask her for something. You ask her directly instead. But if you need an answer from your brother from different city, you will not travel there to do that directly. You will use phone or letter instead to communicate with him.
 
 The computers on one subnet are in same relationship as you and your wife in previous example. They can communicate easily to each other without any additional mechanism. One subnet can be computers in your home, in your office, or customer computers handled by one ISP. But when they need to send a message to computer on different subnet, they have to use “post office” called router.
+<a id='masklink'></a>
 
 ## Subnet Mask
 
@@ -171,10 +168,12 @@ When you compare results of previous operations, you can see that RemoteIP1 is i
 Final conclusion for subnet is:
   * Computers in the same subnet can communicate directly
   * Computers in different subnets have to communicate through router
+<a id='broadcastlink'></a>
 
 ## Broadcast IP Address
 
 In previous part I have mentioned a broadcast address. The broadcast address is used if a computer on the subnet needs to deliver a message to all other computes on the subnet. In this case the computer uses the broadcast address as a destination address of the message. It provides the message content to the all available computers on the subnet. For previous example values when subnet is 192.168.1.0/255.255.255.0 then the broadcast address for subnet has value 192.168.1.255.
+<a id='gatewaylink'></a>
 
 ## Default Gateway and Router
 
@@ -183,6 +182,7 @@ Now we have specified IP address, Network mask and we know for what are those va
 As I mentioned before, the router is something like “post office” in real world. If you need to send a message to computer in different subnet, then you will send this message to the router. Then router will send the message to router, aka “post office” of the destination subnet. Then router for destination subnet will finally deliver your message to final recipient. In real world, the computer message can goes through many routers before it reach the final destination.
 Routers hold and dynamically update set of information how to deliver any message to right destination. Routing is more complex problem but for brief picture of the networking the explanation above is enough.
 Now you may be asked how the computer identifies the router in own subnet? The answer is by next network configuration parameter called Default Gateway IP. This value specifies the IP address of your subnet router. If the computer does not know how to deliver any message directly, then it uses the default gateway. And router on this IP will take care about rest of correct delivery process.
+<a id='natlink'></a>
 
 ## NAT
 
@@ -198,7 +198,7 @@ NAT router then knows that all FTP connections will be forwarded to this FTP ser
 So you can have only one server for one kind of communication available from the public subnets inside the NAT private subnet. It’s the NAT major limitation.
 
 NAT technology is now massively used, because it allows to many computers share only one public IP address and then it saves high valuable commodity: free public IP addresses. If you have an own home network, then for 99.9% you are using the NAT technology for your home computers connectivity to the Internet.
-<a name="dhcp-link"></a>
+<a id='dhcplink'></a>
 
 ## DHCP
 

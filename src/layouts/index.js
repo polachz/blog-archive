@@ -130,6 +130,13 @@ class Layout extends React.Component {
             th, td {
               padding: 5px;
             }
+            :target:before {
+              content: "";
+              display: block;
+              height: 45px;
+              margin: -45px 0 0;
+          }
+          
           `}</style>
         </ScreenWidthContext.Provider>
       </ThemeContext.Provider>
