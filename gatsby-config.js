@@ -53,6 +53,7 @@ module.exports = {
     siteUrl: config.siteUrl,
     contactPostAddress: process.env.CONTACT_POST_ADDRESS || "",
     emailSubLink: process.env.EMAIL_SUB_LINK || "",
+    commentsGitHubRepo: process.env.COMMENTS_GITHUB_REPO || "",
     algolia: {
       appId: process.env.ALGOLIA_APP_ID || "",
       searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
