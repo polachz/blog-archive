@@ -28,6 +28,7 @@ const Bodytext = props => {
           animation-name: bodytextEntry;
           animation-duration: 0;
           color: ${theme.color.neutral.gray.j};
+          
 
           :global(blockquote) {
             border-left: 5px solid #bbbbbb;
@@ -55,18 +56,23 @@ const Bodytext = props => {
           :global(p) {
             font-size: ${theme.font.size.s};
             line-height: ${theme.font.lineHeight.xxl};
+            margin: 0 0 1em;
+          }
+          :global(ol) {
             margin: 0 0 1.5em;
+            padding: 0 0 0 1.5em;
           }
           
           :global(ul) {
             list-style: circle;
             margin: 0 0 1.5em;
             padding: 0 0 0 1.5em;
+            list-style-type: square;
           }
           :global(li) {
-            margin: 0.7em 0;
+            margin: 0.3em 0;
             font-size: ${theme.font.size.s};
-            list-style-type: square;
+            
           }
           :global(a) {
             font-weight: ${theme.font.weight.bold};
