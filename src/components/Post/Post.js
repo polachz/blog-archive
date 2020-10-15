@@ -34,12 +34,11 @@ const Post = props => {
     theme
   } = props;
   const commentBox = React.createRef()
-  const repository = process.env.COMMENTS_GITHUB_REPO
-  console.log(`Repo is: ${repository}`)
   useEffect(() => {
     
     const commentScript = document.createElement('script')
     const repository = data.site.siteMetadata.commentsGitHubRepo
+
     commentScript.async = true
     commentScript.src = 'https://utteranc.es/client.js'
     commentScript.setAttribute('repo', repository) 
