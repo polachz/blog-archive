@@ -32,17 +32,14 @@ Instead of fork the Starter, I provided deep copy of the code and then have star
 - Improved table support (merge or split some cells) by [gatsby-remark-grid-tables](https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/)
 - Comments based on GitHub Issue system powered by [utterances](https://utteranc.es)
 
-## Feel free to fork but on your own risk
+## Feel Free to Fork But on Your Own Risk
 
 [![License: MIT](badge-mit.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY 4.0](badge-cc.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 I do not have ambition to provide next Gatsby Starter. I publish my blog code on GitHub just because maybe someone can find some my mods useful and use it on its own site. 
-But if you really want to clone my repo and use it as your starter then do it (code is MIT licensed). You can try to get missing files in the content and the static folder from original [baobabKoodaa](https://github.com/baobabKoodaa/blog) starter and probably things will work. But I do not grant this. You have to try.
+But if you really want to clone my repo and use it as your starter then do it (code is MIT licensed). Use [baobabKoodaa](https://github.com/baobabKoodaa/blog) steps to do that, but without any warranty. You can try to get missing files in the `content` and the `static` folder from original [baobabKoodaa](https://github.com/baobabKoodaa/blog) starter and probably things will work. But I do not grant this. You have to try.
 
-## How to create your own blog with this repo
-
-Use [baobabKoodaa](https://github.com/baobabKoodaa/blog) steps to do that, but without any warranty. 
 
 ### Environment Variables Used by the Code and Other Code Possibilities
 
