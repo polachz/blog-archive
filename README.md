@@ -1,8 +1,18 @@
 # Blog
 
-Have a peek »»» [https://www.attejuvonen.fi](https://www.attejuvonen.fi)
+Have a peek »»» [https://polach.me](https://polach.me)
 
-## Features
+## Source
+
+This blog code is based on Atte Juvonen's starter [https://github.com/baobabKoodaa/blog](https://github.com/baobabKoodaa/blog)
+
+Instead of fork the Starter, I provided deep copy of the code and then have started to modify it for my needs. 
+
+I do not have ambition to provide next Gatsby Starter. I publish my blog code on GitHub just because maybe someone can find some my mods useful and use it on its own site. 
+But if you really want to clone my repo and use it as your starter then do it.  You can try to get missing files in the content and the static folder from original [baobabKoodaa](https://github.com/baobabKoodaa/blog) starter and probably things will work. But I do not grant this. You have to try. 
+
+
+## Features from Original Starter
 
 - **Responsive** and streamlined design.
 - GatsbyJS compiles the blog into HTML+CSS+JS so **hosting the blog costs nothing** at providers like Netlify.
@@ -16,6 +26,14 @@ Have a peek »»» [https://www.attejuvonen.fi](https://www.attejuvonen.fi)
 - Contact Form.
 - **gatsby-remark-grid-tables** To allow more feature rich tables
 
+## My Additional Improvements and Mods
+
+- Allowed to change site navbar color and apperence just by modify the theme.yaml file
+- Fixed ordered lists to work properly
+- Allowed to specify image size, word wrapping and many more by [gatsby-remark-image-attributes](https://www.gatsbyjs.com/plugins/gatsby-remark-image-attributes/)
+- Implement syntax highligting by [PRISM](https://prismjs.com/) and [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/) plugin
+- Improved table support (merge or split some cells) by [gatsby-remark-grid-tables](https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/)
+- Comments based on GitHub Issue system powered by [utterances](https://utteranc.es)
 
 ## Feel free to fork
 
