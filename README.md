@@ -1,8 +1,15 @@
 # Blog
 
-Have a peek »»» [https://www.attejuvonen.fi](https://www.attejuvonen.fi)
+Have a peek »»» [https://polach.me](https://polach.me)
 
-## Features
+## Source
+
+This blog code is based on Atte Juvonen's starter [https://github.com/baobabKoodaa/blog](https://github.com/baobabKoodaa/blog)
+
+Instead of fork the Starter, I provided deep copy of the code and then have started to modify it for my needs. 
+
+
+## Features from Original Starter
 
 - **Responsive** and streamlined design.
 - GatsbyJS compiles the blog into HTML+CSS+JS so **hosting the blog costs nothing** at providers like Netlify.
@@ -16,60 +23,37 @@ Have a peek »»» [https://www.attejuvonen.fi](https://www.attejuvonen.fi)
 - Contact Form.
 - **gatsby-remark-grid-tables** To allow more feature rich tables
 
+## My Additional Improvements and Mods
 
-## Feel free to fork
+- Allowed to change site navbar color and apperence just by modify the theme.yaml file
+- Fixed ordered lists to work properly
+- Allowed to specify image size, word wrapping and many more by [gatsby-remark-image-attributes](https://www.gatsbyjs.com/plugins/gatsby-remark-image-attributes/)
+- Implement syntax highligting by [PRISM](https://prismjs.com/) and [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/) plugin
+- Improved table support (merge or split some cells) by [gatsby-remark-grid-tables](https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/)
+- Comments based on GitHub Issue system powered by [utterances](https://utteranc.es)
+
+## Feel Free to Fork But on Your Own Risk
 
 [![License: MIT](badge-mit.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY 4.0](badge-cc.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-You are free to use this repo to create your own blog (code is MIT licensed). You may also use the written content in this blog however you like, provided that you [give appropriate credit](https://creativecommons.org/licenses/by/4.0) (CC BY 4.0).
+I do not have ambition to provide next Gatsby Starter. I publish my blog code on GitHub just because maybe someone can find some my mods useful and use it on its own site. 
+But if you really want to clone my repo and use it as your starter then do it (code is MIT licensed). Use [baobabKoodaa](https://github.com/baobabKoodaa/blog) steps to do that, but without any warranty. You can try to get missing files in the `content` and the `static` folder from original [baobabKoodaa](https://github.com/baobabKoodaa/blog) starter and probably things will work. But I do not grant this. You have to try.
 
-#### How to create your own blog with this repo
 
-- Basic setup
-    - Prerequisites: learn about ReactJS and GatsbyJS.
-    - Fork and `npm install`.
-    - Run in development mode with `gatsby develop`. First run will take several minutes, but subsequent runs will be faster.
-    - Run in production mode with `gatsby build && gatsby serve` (or `./fastbuild.sh`). If you want to delete `cache` and `public` before building, use `./slowbuild.sh` (recommended for releases to avoid leaking development data). You may have to make the scripts executable before you are able to run them (`chmod +x filename`).
-- Make it your own
-    - Go through everything in `content/meta/config.js` and `content/pages` and `content/parts`
-    - Search all files for "atte".
-    - Replace `static/preview.jpg` (this is the image that is used when someone shares a link to your blog on a social network like Reddit). Recommended aspect ratio is 1.91.
-    - When you publish, make sure caching and redirects work reasonably. I recommend Netlify, in which case cache configuration in `static/_headers` is fine and you just need to edit 1 line in `static/_redirects`.
-    - Move your own icons into `src/images/app-icons`, run `npm run generate-app-icons`, then replace `static/favicon.ico`.
-    - Environment variables can be set in a `.env` file. It's good practice to keep it in `.gitignore` so it doesn't get published to the repo. When you publish your website, find out how you can add environment variables to your host without publishing the `.env` file. If you are wondering why environment variables are used, it is to prevent people from accidentally spamming (for example, people who forked this repo used to test the contact page by sending me messages like dffdsffdsfd).
-    - There is an e-mail newsletter link on the `Follow` page. Remove it or set up a newsletter and add the URL as an environment variable `EMAIL_SUB_LINK`.
-    - There is a Contact page. Remove it or [Setup Contact Form submission via Google Script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server). You need to add the POST address to environment variable `CONTACT_POST_ADDRESS`.
-    - [OPTIONAL] If you want a "Hero" section at the top of the home page, just set `hero.hide` to `false` in `theme.yaml`.
-    - [OPTIONAL] If you want Google Analytics: add `GOOGLE_ANALYTICS_ID=123456` to environment variables.
-    - [OPTIONAL] If you want a Search page with Algolia: mostly follow instructions from [here](https://dev.greglobinski.com/setup-algolia-account/). Search for commented out code with 'algolia'.
+### Environment Variables Used by the Code and Other Code Possibilities
+
+- **EMAIL_SUB_LINK** If you can use e-mali newsletter then you have to specify subscription link here. Otherwise remove appropriate icon and link on the Follow page
+- **CONTACT_POST_ADDRESS** If you can allow users to contact you by e-mail messages, then follow this recipe: [Setup Contact Form submission via Google Script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server). and then place the POST address to the variable. Otherwise remove the Contact page completely.
+- **GOOGLE_ANALYTICS_ID** Specify here Google Analytics id if you can use this site visit reporting system
+- **COMMENTS_GITHUB_REPO** If you can use comments by [utterances](https://utteranc.es) on your post pages, follow steps from [here](https://dev.to/creativcoder/how-to-add-comment-support-on-your-gatsby-blog-using-github-utterances-423n) to create GitHub repo to provide comments and then place here this repo path ("github_user/repo_name")
+- [OPTIONAL] If you want a "Hero" section at the top of the home page, just set `hero.hide` to `false` in `theme.yaml`.
+- [OPTIONAL] If you want a Search page with Algolia: mostly follow instructions from [here](https://dev.greglobinski.com/setup-algolia-account/). Search for commented out code with 'algolia'.
 - Creating content
-    - Blog posts are in `mock_posts` and `posts` folders. By default only mock posts are used (to help you tweak the website before you have a lot of content). You can switch to real posts by creating an environment variable `POSTS_FOLDER=posts`. Please try not to accidentally repost my real posts if you are only tinkering.
+    - Blog posts are expected in the `content/posts` folder. I'm using Git Submodule for whole `content` folder.
     - When you create posts, a folder with a name like `2020-03-05--my-book-review` will be published, whereas a name like `my-book-review` will be considered a draft and will not be published. There are ways to accidentally publish drafts. If you are worried about that, the easiest way to avoid it is to deploy your site from GitHub via Netlify and _never commit draft posts to the repo_.
     - You have to manually crop images to 2.222 aspect ratio.
 
-## Attribution
 
-Hi, I'm Baobab. I didn't do everything by myself; I leveraged the work of many awesome creators.
-
-- Photos are mostly from [Unsplash](https://www.unsplash.com/), hover over to see photographer attribution.
-- Icons are mostly from [FontAwesome](https://origin.fontawesome.com/).
-
-I started building on top of [Greg Lobinski's](https://github.com/greglobinski) excellent [hero-blog-starter](https://github.com/greglobinski/gatsby-starter-hero-blog/). Main changes from Greg's version:
-
-- Fixed draft posts (used to leak draft posts into production)
-- Fixed RSS feed
-    - Dates were added to RSS items so that RSS readers are able to tell which content is new.
-    - Non-post pages removed from RSS feed.
-- Fixed 404 page (text used to be hidden under header)
-- Contact page entirely redone.
-    - Had a font issue caused by antd library. I was unable to reproduce the issue locally to find what was causing it, so I redid the entire form without the library.
-    - Submission used to require entire web site to be hosted on Netlify. Now the Contact Form submission uses Google Scripts and web site hosting / form handling can be changed independently.
-    - Submission works for users who have JS disabled.
-- Allow multiple tags (used to be just 1 category per post)
-- Allow custom React components inside Markdown files.
-- Added 'Follow' page, so users know that RSS feed exists (the page also contains a link to email newsletter)
-- Added infinite scroll, which gracefully degrades into pagination.
-- Many design changes. Spent a lot of time tweaking image placeholders :gem: Removed and simplified a lot of features to create a less cluttered look (matter of preference, eye of the beholder and so forth...)
 
 
