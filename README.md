@@ -44,7 +44,7 @@ But if you really want to clone my repo and use it as your starter then do it (c
 ### Environment Variables Used by the Code and Other Code Possibilities
 
 - **EMAIL_SUB_LINK** If you can use e-mali newsletter then you have to specify subscription link here. Otherwise remove appropriate icon and link on the Follow page
-- **CONTACT_POST_ADDRESS** If you can allow users to contact you by e-mail messages, then follow this recipe: [Setup Contact Form submission via Google Script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server). and then place the POST address to the variable. Otherwise remove the Contact page completely.
+- There is a Contact page. Remove it or set up handling for your form submissions. The POST address where forms are sent is defined in environment variable `CONTACT_POST_ADDRESS`. I'm using Google Script to handle form submissions. If you also want to use Google Script, [instructions are here](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server) and [here is an improved version of the script](handleFormSubmission.gs).
 - **GOOGLE_ANALYTICS_ID** Specify here Google Analytics id if you can use this site visit reporting system
 - **COMMENTS_GITHUB_REPO** If you can use comments by [utterances](https://utteranc.es) on your post pages, follow steps from [here](https://dev.to/creativcoder/how-to-add-comment-support-on-your-gatsby-blog-using-github-utterances-423n) to create GitHub repo to provide comments and then place here this repo path ("github_user/repo_name")
 - [OPTIONAL] If you want a "Hero" section at the top of the home page, just set `hero.hide` to `false` in `theme.yaml`.
