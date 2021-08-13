@@ -36,7 +36,7 @@ class Contact extends React.Component {
     }
     if (this.state.human != "cyklomiklo") {
       // Humans might make an error with this field, advise them.
-      alert("Bot check failed. Please write 'required sentence' (without quotes) in the field just above the submit button, then try again.")
+      alert("Bot check failed. Please read task description again carefully and write required sentence as one word without quotes and spaces in the field just above the submit button, then try again.")
       return
     }
 
@@ -150,7 +150,7 @@ class Contact extends React.Component {
                 </label>
                 <br/><br/>
                 <label className="formItem" >
-                  If you are not a robot, then write "cyklomiklo" in this field:<br/>
+                  If you are not a robot, then write "cyklo miklo" as one word (without quotes and spaces) in this field:<br/>
                   <input
                     type="human"
                     name="human"
