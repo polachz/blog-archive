@@ -34,9 +34,9 @@ class Contact extends React.Component {
       // This is an invisible honeypot field. Only bots will fill it.
       return
     }
-    if (this.state.human != "human") {
+    if (this.state.human != "cyklomiklo") {
       // Humans might make an error with this field, advise them.
-      alert("Bot check failed. Please write 'human' (without quotes) in the field just above the submit button, then try again.")
+      alert("Bot check failed. Please write 'required sentence' (without quotes) in the field just above the submit button, then try again.")
       return
     }
 
@@ -150,7 +150,7 @@ class Contact extends React.Component {
                 </label>
                 <br/><br/>
                 <label className="formItem" >
-                  If you are not a robot, then write "human" in this field:<br/>
+                  If you are not a robot, then write "cyklomiklo" in this field:<br/>
                   <input
                     type="human"
                     name="human"

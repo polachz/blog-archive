@@ -55,9 +55,9 @@ function doPost(e) {
       // If honeypot is triggered we just ignore this submission.
       throw new Error("Honeypot field triggered, treating message is spam.");
     }
-    if (typeof String(mailData.human) === "undefined" || String(mailData.human) !== "human") {
+    if (typeof String(mailData.human) === "undefined" || String(mailData.human) !== "cyklomiklo") {
       // If "human" is not found in "human" field we just ignore this submission.
-      throw new Error("Bot check failed, there was a field where you were supposed to type: human.");
+      throw new Error("Bot check failed, there was a field where you were supposed to type correct sentense.");
     }
     
     record_data(e);
