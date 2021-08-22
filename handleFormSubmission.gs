@@ -73,7 +73,7 @@ function doPost(e) {
     var replyTo = (typeof String(mailData.emailReal) !== "undefined" ? String(mailData.emailReal) : "no-reply@baobab.fi")
     MailApp.sendEmail({
       to: String(sendEmailTo),
-      subject: "attejuvonen.fi visitor submitted contact form",
+      subject: "ZP Blog contact form",
       replyTo: String(replyTo),
       htmlBody: formatMailBody(mailData, dataOrder)
     });
