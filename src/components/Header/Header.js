@@ -188,7 +188,6 @@ class Header extends React.Component {
 
                 h1 {
                   margin: ${theme.space.stack.xxs};
-                  # color: ${theme.header.color.siteTitle};
                 }
 
                 h2 {

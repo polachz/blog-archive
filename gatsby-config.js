@@ -121,8 +121,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              backgroundColor: "transparent",
-              tracedSVG: { color: '#f9ebd2' }
+              backgroundColor: "transparent"
             }
           },
           {
@@ -137,7 +136,7 @@ module.exports = {
               //   If this is set to true, all CSS
               //   property names will be recognized
               //   as styleAttribute.
-              styleAttributes: true,
+              //   styleAttributes: true,
   
               // ?Boolean
               //   If true, all attributes that
@@ -258,12 +257,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
-      }
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
